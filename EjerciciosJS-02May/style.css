@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/** Los selectores de CSS nos permiten darle estilos al html
+    y se ven como       body {}    .class{}    #id {}
+*/
+
+/** 
+    vw -> viewportwidth (ancho ventana)
+    vh -> viewportheight (alto de la ventana)
+
+    100vh -> alto maximo de la ventana
+    100vw -> ancho maximo de la ventana
+*/
+
+#root {
+    width: 100vw;
+    height: 100vh;
+}
+
+.header {
+    padding: 10px 2.5vw;
+    width: calc(100% - 5vw);
+    height: calc(10vh - 20px);
+    background-color: #510DDA;
+    min-height: calc(10vh - 20px);
+    max-height: calc(10vh - 20px);
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.header ul li {
+    margin: 0 2vw;
+}
+
+.header ul li a {
+    color: #85929E;
+    font-weight: 500;
+    font-size: medium;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header ul li a:hover {
+    color: #FFF;
+}
+
+.content {
+    overflow: scroll;
+    padding: 10px 2.5vw;
+    width: calc(100% - 5vw);
+    height: calc(90vh - 20px);
+    min-height: calc(90vh - 20px);
+    max-height: calc(90vh - 20px);
+}
+
+#list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#list.vertical {
+    gap: 30px 30px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#list.horizontal {
+    gap: 30px;
+    overflow: scroll;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#list.horizontal>.chip:first-child {
+    margin-top: 20px;
+}
+
+.chip {
+    height: 50px;
+    font-size: 16px;
+    padding: 0 25px;
+    cursor: pointer;
+    line-height: 50px;
+    border-radius: 25px;
+    display: inline-block;
+    background-color: #f1f1f1;
+}
+
+.chip img {
+    float: left;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 0 10px 0 -25px;
+}
+
+.btnFloat {
+    top: 20px;
+    right: 30px;
+    padding: 10px;
+    cursor: pointer;
+    color: #510DDA;
+    position: absolute;
+    border-radius: 7px;
+    background-color: #FFF;
+}
